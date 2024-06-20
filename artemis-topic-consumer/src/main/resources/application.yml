@@ -1,5 +1,4 @@
 spring:
-  main:
 #    banner-mode: off
   application:
     name: artemis-consumer
@@ -13,12 +12,14 @@ logging:
   pattern:
     console: "[%thread]:%msg%n"
   level:
-      - ".=info"
-      - "com.sbm.artemis.demo=debug"
-      - "org.springframework=info"
+    root: "info"
+    com.sbm.artemis.demo : "debug"
+    org.springframework : "info"
 ---
 spring:
-  profiles: local
+  config:
+    activate:
+      on-profile: local
   artemis:
        broker-url: vm://embedded?broker.persistent=false,useShutdownHook=false
        in-memory: true
@@ -53,11 +54,12 @@ jms.topic.subscription_name : subscription
 jms.topic.subscription_durable : false
 ---
 spring:
-  profiles: node1
+  config:
+    activate:
+      on-profile: node1
   artemis:
     mode: native
-    host: localhost
-    port: 61616
+    broker-url: tcp://localhost:61616
     user: user
     password: password
   jms:
@@ -71,11 +73,12 @@ jms.topic.subscription_durable : false
 
 ---
 spring:
-  profiles: node2
+  config:
+    activate:
+      on-profile: node2
   artemis:
     mode: native
-    host: localhost
-    port: 61617
+    broker-url: tcp://localhost:61617
     user: user
     password: password
   jms:
@@ -89,11 +92,12 @@ jms.topic.subscription_durable : false
 
 ---
 spring:
-  profiles: node3
+  config:
+    activate:
+      on-profile: node3
   artemis:
     mode: native
-    host: localhost
-    port: 61618
+    broker-url: tcp://localhost:61618
     user: user
     password: password
   jms:

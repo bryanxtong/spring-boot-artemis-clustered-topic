@@ -159,7 +159,7 @@ under the License.
             <max-hops>1</max-hops>
 <!--  If the server is clustered and scale-down is true then when the server is shutdown gracefully (i.e. stopped without crashing)
  it will find another node in the cluster and send all of its messages (both durable and non-durable) to that node. -->
-	    <scale-down>true</scale-down>
+	    <scale-down-connector>true</scale-down-connector>
             <discovery-group-ref discovery-group-name="my-discovery-group"/>
          </cluster-connection>
       </cluster-connections>

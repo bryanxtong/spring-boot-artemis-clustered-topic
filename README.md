@@ -6,10 +6,10 @@
 - The project is configured to run on `local mode` (embedded server) and `clustered mode`  (different nodes) .
 
 # Technologies
-- Java 8
+- Java 17
 - Maven 3
-- Spring Boot: 1.5.9.RELEASE
-- Apache Artemis 2.4.0
+- Spring Boot: 3.3.0
+- Apache Artemis 2.35.0
 
 # [ Optional ]  Run the project in `Local` Mode
 

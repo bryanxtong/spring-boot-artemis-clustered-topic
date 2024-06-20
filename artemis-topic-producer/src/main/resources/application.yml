@@ -1,5 +1,4 @@
 spring:
-  main:
 #    banner-mode: off
   application:
     name: artemis-producer
@@ -14,17 +13,20 @@ logging:
   pattern:
     console: "[%thread]:%msg%n"
   level:
-      - ".=info"
-      - "com.memorynotfound=debug"
-      - "org.springframework=info"
+    com.memorynotfound: "debug"
+    org.springframework: info
 debug: false
 ---
 spring:
-  profiles: local
+  config:
+    activate:
+      on-profile: local
   artemis:
        broker-url: vm://embedded?broker.persistent=false,useShutdownHook=false
+
        in-memory: true
        non-blocking-redelivery: true
+
        packages:
          trust-all: false
          trusted: com.sbm.artemis.demo
@@ -52,11 +54,12 @@ jms.queue.destination : demoQueue
 
 ---
 spring:
-  profiles: clustered-topic
+  config:
+    activate:
+      on-profile: clustered-topic
   artemis:
     mode: native
-    host: localhost
-    port: 61616
+    broker-url: tcvp://localhost:61616
     user: user
     password: password
   jms:

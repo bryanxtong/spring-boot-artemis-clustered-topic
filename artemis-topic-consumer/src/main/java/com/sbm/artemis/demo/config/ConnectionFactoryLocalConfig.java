@@ -1,6 +1,6 @@
 package com.sbm.artemis.demo.config;
 
-import org.apache.activemq.artemis.api.jms.ActiveMQJMSClient;
+import jakarta.jms.ConnectionFactory;
 import org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory;
 import org.apache.activemq.artemis.jms.client.ActiveMQTopicConnectionFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -15,8 +15,6 @@ import org.springframework.jms.config.JmsListenerContainerFactory;
 import org.springframework.jms.support.converter.MappingJackson2MessageConverter;
 import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
-
-import javax.jms.ConnectionFactory;
 
 @Configuration
 @EnableJms

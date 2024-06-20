@@ -22,21 +22,12 @@ spring:
       on-profile: local
   artemis:
        broker-url: vm://embedded?broker.persistent=false,useShutdownHook=false
-       in-memory: true
-       non-blocking-redelivery: true
-       packages:
-         trust-all: false
-         trusted: com.sbm.artemis.demo
        pool:
          block-if-full: true
          block-if-full-timeout: -1
-         create-connection-on-startup: true
          enabled: false
-         expiry-timeout: 0
          idle-timeout: 30000
          max-connections: 1
-         maximum-active-session-per-connection: 500
-         reconnect-on-exception: true
          time-between-expiration-check: -1
          use-anonymous-producers: true
 #  artemis:
@@ -47,6 +38,8 @@ spring:
 #      password: password
   jms:
     pub-sub-domain: true
+
+#jms.artemis.port: 61616
 jms.queue.destination : demoQueue
 jms.topic.destination : demoTopic
 
@@ -65,6 +58,7 @@ spring:
   jms:
     pub-sub-domain: true
 
+jms.artemis.port: 61616
 jms.queue.destination : demoQueue
 jms.topic.destination : demoTopic
 jms.topic.client_id : client1
@@ -84,6 +78,7 @@ spring:
   jms:
     pub-sub-domain: true
 
+jms.artemis.port: 61617
 jms.queue.destination : demoQueue
 jms.topic.destination : demoTopic
 jms.topic.client_id : client2
@@ -103,6 +98,7 @@ spring:
   jms:
     pub-sub-domain: true
 
+jms.artemis.port: 61618
 jms.queue.destination : demoQueue
 jms.topic.destination : demoTopic
 jms.topic.client_id : client3

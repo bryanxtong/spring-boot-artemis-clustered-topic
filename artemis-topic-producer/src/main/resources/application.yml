@@ -13,7 +13,8 @@ logging:
   pattern:
     console: "[%thread]:%msg%n"
   level:
-    com.memorynotfound: "debug"
+    root: info
+    com.memorynotfound: debug
     org.springframework: info
 debug: false
 ---

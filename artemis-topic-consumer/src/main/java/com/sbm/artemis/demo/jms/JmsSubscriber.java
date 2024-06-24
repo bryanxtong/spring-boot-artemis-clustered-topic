@@ -21,7 +21,7 @@ public class JmsSubscriber {
 	@Value("${jms.topic.subscription_name:${random.value}}")
 	String subscriptionName;
 
-	@Value("${jms.artemis.port:unknown}")
+	@Value("${spring.artemis.port:unknown}")
 	String port;
 
 	@JmsListener(destination = "${jms.topic.destination}", containerFactory = "pubSubFactory", subscription = "${jms.topic.subscription_name:${random.value}", id = "${jms.topic.client_id:${random.value}}")

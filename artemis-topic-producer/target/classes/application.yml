@@ -14,7 +14,7 @@ logging:
     console: "[%thread]:%msg%n"
   level:
     root: info
-    com.memorynotfound: "debug"
+    com.memorynotfound: debug
     org.springframework: info
 debug: false
 ---

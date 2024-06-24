@@ -9,7 +9,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
     </properties>
-    
+
     <modules>
         <module>artemis-topic-producer</module>
         <module>artemis-topic-consumer</module>
@@ -18,7 +18,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.0</version>
+        <version>3.3.1</version>
     </parent>
 
     <groupId>com.sbm.artemis.demo</groupId>
@@ -40,16 +40,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-json</artifactId>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>org.apache.activemq</groupId>
             <artifactId>artemis-jms-client-all</artifactId>
-            <version>2.4.0</version>
+            <version>2.35.0</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
         </dependency>
--->
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
@@ -60,17 +59,20 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-       <!-- <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-        </dependency>-->
+        <!-- <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-devtools</artifactId>
+             <optional>true</optional>
+         </dependency>-->
     </dependencies>
 
     <developers>
@@ -84,12 +86,8 @@
             <roles>
                 <role>developer</role>
             </roles>
-            </developer>
+        </developer>
     </developers>
-
-
-
-
 
 
 </project>

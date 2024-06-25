@@ -1,4 +1,4 @@
-ERROR:::After upgrade, there is one problem which all the subscriber could not get all the messages. (update me for any solution, after spring boot 2.0)
+ERROR:::After upgrade, there is one problem which each one of the subscriber could not get all the messages. (update me for any solution, after spring boot 2.0)
 
 # Spring Boot Artemis Clustered Topic
   A sample project to demonstrate the asynchronous communication between two spring boot apps producer and consumer through Apache ActiveMQ Artemis 2.35.0 using `topic` (publish-subscribe) in a cluster mode.
